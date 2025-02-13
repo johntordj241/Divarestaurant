@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark text-white font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gradient-gold text-black font-medium px-6 py-3 rounded-md 
+           shadow-gold hover:shadow-gold-hover transition-all duration-300
+           transform hover:-translate-y-0.5;
+  }
+
+  .input-styled {
+    @apply bg-white/10 border border-white/20 rounded-lg px-4 py-2 
+           text-white placeholder-gray-400 focus:ring-2 focus:ring-gold 
+           focus:border-transparent transition-colors;
+  }
+
+  .card-hover {
+    @apply transform transition-all duration-300 hover:-translate-y-1 
+           hover:shadow-gold cursor-pointer;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-serif text-center mb-12 text-gold;
+  }
+
+  .gold-border {
+    @apply border-2 border-gold/50 hover:border-gold transition-colors duration-300;
+  }
+
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-sm;
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+
+  .border-gradient {
+    border-image: linear-gradient(45deg, #D4AF37, #FFE5B4) 1;
+  }
+}
